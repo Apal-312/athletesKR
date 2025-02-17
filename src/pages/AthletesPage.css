@@ -1,0 +1,78 @@
+/* Общие стили для страницы */
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("https://avatars.mds.yandex.net/i?id=de08ae70d38c24897bc3aadc2ab5db08_l-5274714-images-thumbs&n=13");
+  background-size: cover;
+  background-position: center;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  width: 100%;
+  height: auto;
+}
+
+/* Медиазапросы для адаптивности */
+
+/* Для экранов шириной 1200px и выше */
+@media (max-width: 1200px) {
+  .container {
+    padding: 15px;
+  }
+
+  .product-list {
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  }
+}
+
+/* Для экранов шириной 992px и ниже */
+@media (max-width: 992px) {
+  .container {
+    padding: 10px;
+  }
+
+  .product-list {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
+
+/* Для экранов шириной 768px и ниже */
+@media (max-width: 768px) {
+  .container {
+    padding: 8px;
+  }
+
+  .product-list {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+/* Для экранов шириной 480px и ниже */
+@media (max-width: 480px) {
+  .container {
+    padding: 5px;
+  }
+
+  .product-list {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+/* Для экранов шириной 320px и ниже */
+@media (max-width: 320px) {
+  .container {
+    padding: 3px;
+  }
+
+  .product-list {
+    grid-template-columns: 1fr;
+  }
+}

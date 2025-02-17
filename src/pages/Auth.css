@@ -1,0 +1,232 @@
+/* Общие стили */
+.auth-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(135deg, #1e1e2f, #28293e);
+  color: #fff;
+}
+
+.left-section {
+  flex: 0 0 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.left-section video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.left-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.right-section {
+  flex: 0 0 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e1e2f, #28293e);
+}
+
+.auth-form {
+  background: rgba(28, 28, 28, 0.6);
+  padding: 50px;
+  border-radius: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.auth-title {
+  margin-bottom: 25px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffd700;
+  text-shadow: 0px 5px 15px rgb(231 213 117 / 58%);
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 1rem;
+  color: #ffd700;
+  margin-bottom: 8px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.input-group input {
+  width: calc(100% - 30px);
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  outline: none;
+  transition: all 0.4s ease;
+}
+
+.input-group input:focus {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 10px #edd133, 0 0 20px #8e7e23;
+}
+
+.error-msg {
+  color: #ff4d4d;
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
+
+.btn-container {
+  margin-top: 30px;
+}
+
+.btn-container button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(90deg, #ffcc00, #ffa500);
+  color: #14142b;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.4s ease;
+}
+
+.btn-container button:hover {
+  background: linear-gradient(90deg, #ffd700, #ffc400);
+  transform: scale(1.05);
+}
+
+.btn-container p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-top: 20px;
+}
+
+.btn-container span {
+  color: #ffd700;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.btn-container span:hover {
+  color: #ffe066;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Адаптивная верстка */
+@media (max-width: 1024px) {
+  .auth-container {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+  }
+
+  .left-section {
+    flex: 0 0 40%;
+    height: 40vh;
+  }
+
+  .right-section {
+    flex: 0 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .auth-form {
+    max-width: 90%;
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .left-section {
+    flex: 0 0 30%;
+    height: 30vh;
+  }
+
+  .auth-form {
+    max-width: 95%;
+    padding: 30px;
+  }
+
+  .auth-title {
+    font-size: 2rem;
+  }
+
+  .btn-container button {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-container {
+    padding: 10px;
+  }
+
+  .left-section {
+    flex: 0 0 25%;
+    height: 25vh;
+  }
+
+  .right-section {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .auth-form {
+    max-width: 100%;
+    padding: 20px;
+    margin-top: -20px;
+  }
+
+  .auth-title {
+    font-size: 1.8rem;
+  }
+
+  .input-group input {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+
+  .btn-container button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}

@@ -1,0 +1,239 @@
+.sports-container {
+  position: relative; /* Обязательно */
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+  background-image: url("https://avatars.mds.yandex.net/i?id=3cf96f069abce2adb038426de7b5e2f1_l-5859086-images-thumbs&ref=rim&n=13&w=1500&h=1000");
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+}
+
+.sports-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Прозрачный черный фон */
+  border: 5px solid black; /* Обводка */
+  z-index: 1; /* Чтобы быть позади контента */
+  pointer-events: none; /* Чтобы клики проходили насквозь */
+}
+
+.sport-card {
+  position: relative;
+  z-index: 2; /* Чтобы элементы карты находились выше псевдоэлемента */
+}
+
+h1 {
+  font-size: 50px;
+  margin-top: 5px;
+  text-align: center; /* Центрирование заголовка */
+  margin-bottom: 8px; /* Отступ после заголовка */
+  font-family: Luminari, fantasy;
+  /* background-image: url(https://avatars.mds.yandex.net/i?id=3cf96f069abce2adb038426de7b5e2f1_l-5859086-images-thumbs&ref=rim&n=13&w=1500&h=1000); */
+  /* background-color: rgba(0, 0, 0, 0.9); */
+  color: #ffffff;
+  position: relative;
+  /* padding: 20px; */
+}
+
+.sports-page h1 {
+  /* width: 98.1%; */
+  /* height: 100%; */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  background-image: url("https://i.pinimg.com/736x/b6/11/3b/b6113b83c5e8fbfa35062b6de55f9102.jpg");
+  /* background-color: #090931; */
+  background-color: rgba(0, 0, 0, 0.9);
+  margin: 0px;
+  padding: 20px;
+}
+/* .sports-page h1::before {
+  background-color: rgba(0, 0, 0, 0.9);
+} */
+
+.sport-card {
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sport-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(1, 51, 253, 0.585);
+}
+
+.sport-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-top: 10px;
+}
+
+.sport-card h2 {
+  margin: 10px 0;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+/* Стили для модального окна */
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  height: auto;
+  max-width: 400px;
+  box-shadow: 0 8px 16px rgba(253, 30, 1, 0.514);
+}
+
+.modal img {
+  width: 100%;
+  height: auto;
+  max-width: 500px; /* Ограничение максимальной ширины */
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.modal h2 {
+  text-decoration: none;
+  text-align: center;
+  margin: 5px;
+}
+.modal p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+  margin: 0px;
+  /* top: -10px; */
+}
+
+/* .modal a {
+  color: #007bff;
+  text-decoration: none;
+} */
+
+.modal a:hover {
+  text-decoration: underline;
+}
+
+/* Стили для кнопки внутри модального окна */
+.modal button {
+  background-color: #d3183a; /* Красный цвет по умолчанию */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+  margin: 10px auto;
+  display: block;
+}
+
+.modal button:hover {
+  background-color: #007bff; /* Синий цвет при наведении */
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  /* background-color: #007bff; */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+button:hover {
+  /* background-color: #0056b3; */
+}
+
+/* Медиазапросы для адаптивности */
+
+/* Для экранов шириной от 1200px */
+@media (max-width: 1200px) {
+  .sport-card {
+    width: 250px;
+  }
+
+  h1 {
+    font-size: 45px;
+  }
+}
+
+/* Для экранов шириной от 992px */
+@media (max-width: 992px) {
+  .sport-card {
+    width: 220px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+}
+
+/* Для экранов шириной от 768px */
+@media (max-width: 768px) {
+  .sport-card {
+    width: 200px;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+}
+
+/* Для экранов шириной от 480px */
+@media (max-width: 480px) {
+  .sport-card {
+    width: 160px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+}
+
+/* Для экранов шириной от 320px */
+@media (max-width: 320px) {
+  .sport-card {
+    width: 140px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+}

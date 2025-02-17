@@ -1,0 +1,268 @@
+.home-main-page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://img.olympics.com/images/image/private/t_s_pog_overview_hero_xl_2x/f_auto/primary/wganxha7is1rwzqw9qs7");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* полупрозрачная черная обводка */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content > div {
+  max-width: 800px;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.content img {
+  width: 100%;
+  max-width: 250px; /* уменьшенная ширина изображения для устройств до 320px */
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.content h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #ffd60a;
+}
+
+.content p {
+  font-size: 24px;
+  line-height: 1.6;
+  color: #ffd60a;
+}
+
+/* Продолжение стилей для викторины */
+.quiz-container::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.3),
+    rgba(0, 0, 0, 0.1)
+  );
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.question {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  z-index: 1;
+  position: relative;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option-button {
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  font-size: 1.2em;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  z-index: 1;
+  position: relative;
+}
+
+.option-button:hover {
+  background-color: #ffe882;
+  transform: scale(1.05);
+}
+
+.option-button.correct {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.option-button.incorrect {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.submit-button {
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s, transform 0.2s;
+  z-index: 1;
+  position: relative;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.feedback {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+  z-index: 1;
+  position: relative;
+}
+
+.results {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+  margin-top: 30px;
+  z-index: 1;
+  position: relative;
+}
+
+/* Анимация shake */
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Медиазапросы для адаптивности */
+@media (max-width: 1200px) {
+  .content h1 {
+    font-size: 40px;
+  }
+
+  .content h2 {
+    font-size: 32px;
+  }
+
+  .content p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .content h1 {
+    font-size: 36px;
+  }
+
+  .content h2 {
+    font-size: 28px;
+  }
+
+  .content p {
+    font-size: 18px;
+  }
+
+  .content img {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 32px;
+  }
+
+  .content h2 {
+    font-size: 24px;
+  }
+
+  .content p {
+    font-size: 16px;
+  }
+
+  .content img {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content h1 {
+    font-size: 28px;
+  }
+
+  .content h2 {
+    font-size: 22px;
+  }
+
+  .content p {
+    font-size: 14px;
+  }
+
+  .content img {
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 320px) {
+  .content h1 {
+    font-size: 24px;
+  }
+
+  .content h2 {
+    font-size: 18px;
+  }
+
+  .content p {
+    font-size: 12px;
+  }
+
+  .content img {
+    max-width: 150px;
+  }
+
+  /* .MuiPaper-root.MuiPaper-elevation
+    .MuiPaper-rounded
+    .MuiPaper-elevation1
+    .MuiCard-root
+    .css-rme1fa-MuiPaper-root-MuiCard-root {
+    width: 50%;
+  } */
+}

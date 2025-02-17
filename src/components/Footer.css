@@ -1,0 +1,104 @@
+/* Общие стили для ссылок внутри блока "Олимпийские игры" */
+#footer-container a {
+  display: block;
+  margin: 20px;
+  font-size: 18px;
+}
+
+/* Специфические стили для ссылок "Париж-2024", "Результаты и медали", "Повторы и лучшие моменты" и "Все Олимпийские игры" */
+#footer-container a:nth-child(2),
+#footer-container a:nth-child(3),
+#footer-container a:nth-child(4),
+#footer-container a:nth-child(5) {
+  margin-top: 5px;
+}
+
+/* Пример добавления других стилей для иконок социальных сетей внизу */
+#footer-container .social-icons {
+  margin-top: 30px;
+}
+
+#footer-container .social-icons .MuiIconButton-root {
+  margin: 0 10px;
+}
+
+Link:hover {
+  color: #ff4081; /* Цвет при наведении */
+  text-decoration: none; /* Подчеркивание при наведении */
+}
+
+h6:hover {
+  color: #ff4081; /* Цвет при наведении */
+  text-decoration: none;
+}
+
+a:hover {
+  color: red; /* Цвет при наведении */
+  text-decoration: none;
+}
+
+/* Responsive styles */
+
+/* For 1200px and up (large screens) */
+@media (max-width: 1200px) {
+  #footer-container .MuiGrid-item {
+    text-align: left;
+  }
+  #footer-container a {
+    font-size: 20px;
+  }
+}
+
+/* For 992px and up (medium screens) */
+@media (max-width: 992px) {
+  #footer-container .MuiGrid-item {
+    text-align: left;
+    padding: 10px;
+  }
+  #footer-container a {
+    font-size: 18px;
+  }
+  .social-icons {
+    justify-content: center;
+  }
+  .MuiTypography-root.MuiTypography-h6.css-1vh9ox0-MuiTypography-root {
+    margin-top: 50px;
+  }
+}
+
+/* For 768px and up (tablets and small screens) */
+@media (max-width: 768px) {
+  #footer-container .MuiGrid-item {
+    text-align: center;
+    padding: 20px;
+  }
+  #footer-container a {
+    font-size: 16px;
+  }
+  .social-icons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* For 480px and up (small screens) */
+@media (max-width: 480px) {
+  #footer-container a {
+    font-size: 14px;
+    margin: 10px;
+  }
+  .social-icons {
+    margin-top: 20px;
+  }
+}
+
+/* For 320px and up (extra small screens) */
+@media (max-width: 320px) {
+  #footer-container a {
+    font-size: 12px;
+    margin: 5px;
+  }
+  .social-icons {
+    margin-top: 15px;
+  }
+}

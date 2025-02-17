@@ -1,0 +1,174 @@
+.p:hover {
+  color: red;
+  text-decoration: none;
+}
+
+title {
+  color: #ff4081;
+  text-decoration: none;
+}
+
+h6 {
+  text-decoration: none;
+  color: red;
+}
+/* Прозрачный фон для Drawer */
+.MuiPaper-root.MuiDrawer-paper {
+  width: 15% !important;
+  height: 45% !important;
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  font-variant: normal;
+}
+
+/* Шрифт и hover для элементов меню */
+.menu-item,
+.MuiListItemText-primary {
+  font-family: "Times, Times New Roman, serif" !important;
+  font-weight: 550 !important;
+}
+
+.menu-item:hover {
+  color: red;
+}
+
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation16.MuiDrawer-paper.MuiDrawer-paperAnchorRight.css-1160xiw-MuiPaper-root-MuiDrawer-paper {
+  width: 15%;
+  height: 45%;
+  background-color: rgba(255, 255, 255, 0.9); /* Прозрачный белый фон */
+}
+
+img,
+video {
+  visibility: visible !important; /* Ensure the images and videos are visible */
+  opacity: 1 !important; /* Make sure images are fully visible */
+}
+
+/* Navbar.css */
+@media (max-width: 1200px) {
+  .root {
+    padding: 10px;
+  }
+  .menuButton {
+    margin-right: 5px;
+  }
+  .icon {
+    height: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .root {
+    padding: 8px;
+  }
+  .menuButton {
+    margin-right: 5px;
+  }
+  .icon {
+    height: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .root {
+    padding: 5px;
+  }
+  .menuButton {
+    margin-right: 3px;
+  }
+  .icon {
+    height: 20px;
+  }
+  .menuItem {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .root {
+    padding: 3px;
+  }
+  .menuButton {
+    margin-right: 2px;
+  }
+  .icon {
+    height: 15px;
+  }
+  .menuItem {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  .root {
+    padding: 2px;
+  }
+  .menuButton {
+    margin-right: 2px;
+  }
+  .icon {
+    height: 12px;
+  }
+  .menuItem {
+    font-size: 10px;
+  }
+}
+
+/* Для экранов шириной до 1200px */
+@media (max-width: 1200px) {
+  .MuiPaper-root.MuiDrawer-paper {
+    width: 20% !important; /* Ширина бокового меню немного больше */
+    height: 50% !important; /* Увеличиваем высоту */
+  }
+  .menu-item,
+  .MuiListItemText-primary {
+    font-size: 16px; /* Уменьшаем размер шрифта */
+  }
+}
+
+/* Для экранов шириной до 992px */
+@media (max-width: 992px) {
+  .MuiPaper-root.MuiDrawer-paper {
+    width: 25% !important; /* Боковое меню увеличивается */
+    height: 60% !important; /* Высота увеличивается */
+  }
+  .menu-item,
+  .MuiListItemText-primary {
+    font-size: 14px; /* Уменьшаем размер шрифта */
+  }
+}
+
+/* Для экранов шириной до 768px */
+@media (max-width: 768px) {
+  .MuiPaper-root.MuiDrawer-paper {
+    width: 30% !important; /* Боковое меню ещё шире */
+    height: 70% !important; /* Высота увеличивается */
+  }
+  .menu-item,
+  .MuiListItemText-primary {
+    font-size: 12px; /* Ещё меньше шрифт */
+  }
+}
+
+/* Для экранов шириной до 480px */
+@media (max-width: 480px) {
+  .MuiPaper-root.MuiDrawer-paper {
+    width: 35% !important; /* Ширина меню на маленьких экранах */
+    height: 80% !important; /* Высота больше */
+  }
+  .menu-item,
+  .MuiListItemText-primary {
+    font-size: 10px; /* Очень маленький шрифт */
+  }
+}
+
+/* Для экранов шириной до 320px */
+@media (max-width: 320px) {
+  .MuiPaper-root.MuiDrawer-paper {
+    width: 40% !important; /* Ширина меню на самых маленьких экранах */
+    height: 90% !important; /* Почти вся высота */
+  }
+  .menu-item,
+  .MuiListItemText-primary {
+    font-size: 8px; /* Очень маленький шрифт */
+  }
+}

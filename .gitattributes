@@ -1,3 +1,4 @@
 *.mp4 filter=lfs diff=lfs merge=lfs -text
 node_modules/.cache/* filter=lfs diff=lfs merge=lfs -text
 src/components/homePage/assets/natureKR.mp4 filter=lfs diff=lfs merge=lfs -text
+node_modules/.cache/default-development/*.pack filter=lfs diff=lfs merge=lfs -text

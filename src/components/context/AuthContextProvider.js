@@ -73,7 +73,8 @@ const AuthContextProvider = ({ children }) => {
       await fire.auth().signOut();
       navigate("/"); // Перенаправляем пользователя после выхода
     } catch (error) {
-      console.error("Error logging out: ", error.message); // Логируем ошибку при выходе
+      console.error("Error logging out: ", error.message);
+      alert("Ошибка при выходе из системы. Попробуйте снова.");
     }
   };
 

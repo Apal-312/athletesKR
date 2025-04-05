@@ -39,11 +39,12 @@ const Navbar = () => {
     { id: 1, title: "Атлеты", link: "/athletes" },
     { id: 2, title: "Виды спорта", link: "/sports" },
     { id: 3, title: "Медальный зачет", link: "/medal-table" },
+    { id: 4, title: "Новости", link: "/news" },
   ];
 
   // Если пользователь является администратором, добавляем пункт "Админ"
   if (isAdmin) {
-    pages.push({ id: 4, title: "Админ", link: "/admin" });
+    pages.push({ id: 5, title: "Админ", link: "/admin" });
   }
 
   // Функция для переключения состояния бокового меню (drawer)

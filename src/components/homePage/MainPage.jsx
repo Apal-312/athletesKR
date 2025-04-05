@@ -185,9 +185,9 @@ const MainPage = () => {
           textAlign: "center",
           color: "white",
           padding: "20px",
-          opacity: isVisible ? 1 : 0,
+          opacity: isVisible ? 1 : 0.8,
           transform: isVisible ? "translateY(0)" : "translateY(30px)",
-          transition: "all 0.8s ease-out",
+          transition: "all 0.3s ease-out",
         }}
       >
         <Box sx={{ maxWidth: "800px" }}>

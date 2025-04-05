@@ -7,6 +7,8 @@ import AthletesPage from "../pages/AthletesPage";
 import EditAthletes from "../components/products/EditAthletes";
 import Auth from "../auth/Auth";
 import MedalTable from "../pages/MedalTable";
+import NewsPage from "../pages/NewsPage";
+import NewsDetailsPages from "../pages/NewsDetailsPages";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -18,6 +20,8 @@ const MainRoutes = () => {
     { id: 6, link: "/admin", element: <AdminPage /> },
     { id: 7, link: "/register", element: <Auth /> },
     { id: 8, link: "/medal-table", element: <MedalTable /> },
+    { id: 9, link: "/news", element: <NewsPage /> },
+    { id: 10, link: "/detail-news/:id", element: <NewsDetailsPages /> },
   ];
   return (
     <Routes>

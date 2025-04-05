@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import "./AthletesPage.css";
 
 const AthletesPage = () => {
-  const { products } = useProduct(); // Получаем список продуктов (атлетов) из контекста
+  const { athletes } = useProduct(); // Получаем список продуктов (атлетов) из контекста
   const navigate = useNavigate(); // Хук для навигации между страницами
 
   useEffect(() => {
@@ -14,7 +14,7 @@ const AthletesPage = () => {
 
   return (
     <div className="container">
-      <ProductList products={products} />{" "}
+      <ProductList products={athletes} />{" "}
       {/* Отображаем список продуктов (атлетов) */}
     </div>
   );

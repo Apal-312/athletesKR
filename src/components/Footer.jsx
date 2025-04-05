@@ -90,7 +90,7 @@ const Footer = () => {
                 },
               }}
             >
-              Olympic Channel
+              Олимпийский канал
             </Typography>
             {/* Ссылки для навигации */}
             <Link
@@ -139,6 +139,19 @@ const Footer = () => {
               Исследовать
             </Typography>
             {/* Ссылки для навигации */}
+            <Link
+              href="/news"
+              color="inherit"
+              underline="none"
+              sx={{
+                display: "block",
+                marginBottom: "5px",
+                margin: "20px",
+                fontSize: "18px",
+              }}
+            >
+              Новости
+            </Link>
             <Link
               href="/athletes"
               color="inherit"
